@@ -57,23 +57,23 @@
 
 ## Проверка непротиворечивости
 
-✅ **Timeouts и Performance:** NFR-001 требует P95 ≤ 200 мс для login, NFR-009 устанавливает timeout 3s для внешних вызовов - не конфликтуют.
+- **Timeouts и Performance:** NFR-001 требует P95 ≤ 200 мс для login, NFR-009 устанавливает timeout 3s для внешних вызовов - не конфликтуют.
 
-✅ **Rate Limiting и SLO:** NFR-002 ограничивает 10 req/min на IP для login, NFR-001 тестирует 100 RPS общую нагрузку - покрывают разные аспекты (защита vs производительность).
+- **Rate Limiting и SLO:** NFR-002 ограничивает 10 req/min на IP для login, NFR-001 тестирует 100 RPS общую нагрузку - покрывают разные аспекты (защита vs производительность).
 
-✅ **Privacy и Logging:** NFR-005 требует маскирования PII в логах, NFR-004 требует correlation_id в логах - дополняют друг друга.
+- **Privacy и Logging:** NFR-005 требует маскирования PII в логах, NFR-004 требует correlation_id в логах - дополняют друг друга.
 
-✅ **Security layers:** NFR-003 (AuthN), NFR-006 (AuthZ), NFR-007 (Input Validation) - многоуровневая защита без конфликтов.
+- **Security layers:** NFR-003 (AuthN), NFR-006 (AuthZ), NFR-007 (Input Validation) - многоуровневая защита без конфликтов.
 
 ---
 
 ## Итоги
 
-* ✅ **10 NFR** с измеримыми формулировками
-* ✅ Каждое NFR имеет **Acceptance в формате G-W-T**
-* ✅ Определены **Evidence** и **Trace**
-* ✅ Покрыты критичные категории: Performance, Security (AuthN/AuthZ/Input), Privacy, Data Integrity, Resilience, Observability, Auditability
-* ✅ Нет противоречий между требованиями
+*  **10 NFR** с измеримыми формулировками
+*  Каждое NFR имеет **Acceptance в формате G-W-T**
+*  Определены **Evidence** и **Trace**
+*  Покрыты критичные категории: Performance, Security (AuthN/AuthZ/Input), Privacy, Data Integrity, Resilience, Observability, Auditability
+*  Нет противоречий между требованиями
 
 ---
 
